@@ -6,8 +6,8 @@ router.route('/').get((req, res, next) => {
 });
 
 router.route('/:filename/').get((req, res) => {
-  const fileName = req.params.filename;
-  res.send(fileName);
+    const fileName = req.params.filename;
+    res.send(fileName);
 });
 
 module.exports = router;
