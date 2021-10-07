@@ -9,9 +9,9 @@ router.route('/').get((req, res, next) => {
 
 router.route('/:filename/').get((req, res) => {
     const fileName = req.params.filename;
-    const filePath = path.join(__dirname, "..", "data", filename + ".csv");
+    const filePath = path.join(__dirname, "..", "data", fileName + ".csv");
 
-    const toSend = sv(filePath);
+    const toSend = csv(filePath);
     res.json(toSend);
 });
 
