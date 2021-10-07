@@ -6,7 +6,7 @@ router.route('/').get((req, res, next) => {
 });
 
 router.route('/:filename/').get((req, res) => {
-  const fileName = req.params.fileName;
+  const fileName = req.params.filename;
   res.send(fileName);
 });
 
